@@ -5,7 +5,7 @@ var express = require("express");
 const { nextTick } = require("process");
 var app = express();
 
-var HTTP_PORT = process.env.PORT || 8080;
+var HTTP_PORT = process.env.PORT ||3000;
 
 // call this function after the http server starts listening for requests
 function onHttpStart() {
