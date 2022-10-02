@@ -11,12 +11,12 @@ var HTTP_PORT = process.env.PORT ||3000;
 function onHttpStart() {
   console.log("Express http server listening on: " + HTTP_PORT);
 }
-/*
+
 // setup a 'route' to listen on the default url path (http://localhost)
 app.get("/", function(req,res){
     res.send("Hello World<br /><a href='/about'>Go to the about page</a>");
 });
-*/
+
 
 // P1.setup another route to listen on /blog
 app.get("/blog", function(req,res,next){
