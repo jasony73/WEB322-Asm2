@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Log in page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap v5.1.3 CDNs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="/style/test.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<nav class="navbar bg-transparent navbar-light p-3 navbar-expand-lg">
+    <div class="container">
+     
+        <a href="/views/blog.html" class="navbar-brand">WEB HOSTING CA.</a>
+        <div class="navbar-brand">
+            <a href="#" class="navbar-left">
+              
+            </a>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" style="max-width:100px;margin-top:-7px;"  src="/image/webHosting.png">
+                </a>
+            </div>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+         data-bs-target="#navbarSupportedContent" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                   <!--navbar，可以展開和捲縮 -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto" >
+                <li class="nav-item">
+                    <a href="/views/blog.html" class="nav-link ">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/views/read_more.html" class="nav-link">Read mroe</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/views/registration.html" class="nav-link">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/views/login.html" class="nav-link">Log in</a>
+                </li>
+            </ul>
+            <!-- This is the search bar! -->
+            <form class="d-flex"> <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search"> <button class="btn btn-outline-success" type="submit">Search</button> </form>
+        </div>
+    </div>
+
+</nav>
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+              <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+              </svg>
+              <form>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-group was-validated">
+                        <label class="form-label" for="email">First name</label>
+                        <input class="form-control" type="name" id="name" required>
+                        <div class="invalid-feedback">
+                            Please enter your first name
+                        </div>
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-group was-validated">
+                        <label class="form-label" for="email">Last name</label>
+                        <input class="form-control" type="name" id="name" required>
+                        <div class="invalid-feedback">
+                            Please enter your last name
+                        </div>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4 d-flex align-items-center">
+  
+                    <div class="form-group was-validated">
+                        <label class="form-label" for="email">Birthday</label>
+                        <input class="form-control" type="date" id="date" required>
+                        <div class="invalid-feedback">
+                            Please enter your birthday
+                        </div>
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 mb-4">
+  
+                    <h6 class="mb-2 pb-1">Gender: </h6>
+  
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                        value="option1" checked />
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                        value="option2" />
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                        value="option3" />
+                      <label class="form-check-label" for="otherGender">Other</label>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+  
+                    <div class="form-group was-validated">
+                        
+                        <label class="form-label" for="email">City</label>
+                        <input class="form-control" type="city" id="city" required>
+                        <div class="invalid-feedback">
+                            Please enter your email address
+                        </div>
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 mb-4 pb-2">
+  
+                    <div class="form-group was-validated">
+                        <label class="form-label" for="email">Phone number</label>
+                        <input class="form-control" type="phone" id="phone" required>
+                        <div class="invalid-feedback">
+                            Please enter your Phone number
+                        </div>
+                    </div>
+  
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+    
+                      <div class="form-group was-validated">
+                          <label class="form-label" for="email">Email</label>
+                          <input class="form-control" type="email" id="email" required>
+                          <div class="invalid-feedback">
+                              Please enter your birthday
+                          </div>
+                      </div>
+    
+                    </div>
+                    <div class="row">
+                    <div class="form-group was-validated">
+                        <div class="col-md-6 mb-4 pb-2">
+                        <label class="form-label" for="password">Password</label>
+                        <input class="form-control" type="password" id="password" required>
+                        <div class="invalid-feedback">
+                            Please enter your password
+                        </div>
+                    </div>
+                    <div class="form-group was-validated">
+                        <div class="col-md-6 mb-4 pb-2">
+                        <label class="form-label" for="password">Confirm Password</label>
+                        <input class="form-control" type="password" id="password" required>
+                        <div class="invalid-feedback">
+                            Confirm your password
+                        </div>
+                    </div>
+                    
+  
+  
+                    <div class="form-group form-check">
+                        <input class="form-check-input" type="checkbox" id="check">
+                        <label class="form-check-label" for="check">I'm not a robot</label>
+                    </div>
+                    <input class="btn btn-success w-100" type="submit" value="SIGN UP">
+                </form>
+                <a href="/views/login.html" class="nav-link container align-item-center justify-content-between d-flex ">Already have an account? Log in</a>
+            </div>
+        
+  
+              </form>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  
+  <!-- footer：依到係註腳 -->
+  <footer class="p-5 border-top"></footer>
+  <div class="container align-item-center justify-content-between d-flex bg-transparent navbar-light">  <!-- d-flex：並排效果 -->
+      <p class="mb-0 text-muted">
+          &copy 2022 Web House Canada <br>
+          Student Info:<br>
+          Name: Ka Chun Yuen<br>
+          StID: 154597215<br>
+          User: kyuen16<br>
+          Email: kyuen16@myseneca.ca<br>
+          Date: 02/10/2022<br>
+  
+          This is Seneca WEB322 Asm2<br>
+      </p>
+      
+      <ul class="nav">
+          <li class="nav-item">
+              <a href="" class="nav-link text-muted">URL LINKS</a>
+          </li>
+          <li class="nav-item">
+              <a href="" class="nav-link text-muted">URL LINKS</a>
+          </li>
+      </ul>
+  </div>
+  </section>
+  
+  
