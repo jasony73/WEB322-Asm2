@@ -12,7 +12,7 @@ function onHttpStart(){
 
 // setup a 'route' to listen on the default url path (http://localhost)
 
-app.get("/", function(req,res){
+app.get("/blog", function(req,res){
   res.sendFile(path.join(__dirname,"/blog.html"));
 });
 
