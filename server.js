@@ -12,29 +12,21 @@ function onHttpSStart(){
 
 // setup a 'route' to listen on the default url path (http://localhost)
 app.get("/", function(req,res){
-  res.sendFile(path.join(__dirname,"/views/blog.html"));
-})
-
-
-
-// P1.setup another route to listen on /blog
-app.get("/blog", function(req,res){
-  res.sendFile(path.join(__dirname,"/views/blog.html"));
-
-})
+  res.sendFile(path.join(__dirname,"/blog.html"));
+});
 
 app.get("/article", function(req,res){
-  res.sendFile(path.join(__dirname,"/views/read_more.html"));
+  res.sendFile(path.join(__dirname,"/read_more.html"));
 
 })
 
 app.get("/registration", function(req,res){
-  res.sendFile(path.join(__dirname,"/views/registration.html"));
+  res.sendFile(path.join(__dirname,"/registration.html"));
 
 });
 
 app.get("/login", function(req,res){
-  res.sendFile(path.join(__dirname,"/views/login.html"));
+  res.sendFile(path.join(__dirname,"/login.html"));
 
 });
 
