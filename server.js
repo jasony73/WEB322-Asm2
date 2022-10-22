@@ -24,13 +24,13 @@ app.get("/article", function(req,res){
 });
 
 app.get("/registration", function(req,res){
-  res.sendFile(path.join(__dirname,"/registration.html"));
-
+  // res.sendFile(path.join(__dirname,"/registration.html"));
+     res.render("registration", { layout: false });
 });
 
 app.get("/login", function(req,res){
-  res.sendFile(path.join(__dirname,"/login.html"));
-
+  // res.sendFile(path.join(__dirname,"/login.html"));
+     res.render("login", { layout: false });
 });
 
 

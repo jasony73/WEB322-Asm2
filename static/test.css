@@ -15,3 +15,10 @@ padding-right: .75em;
 .card-registration .select-arrow {
 top: 13px;
 }
+
+
+.nav-link:hover{
+    box-shadow: 1px 1px 20px  (0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    transition: all 0.4s ease-in-out;
+}
