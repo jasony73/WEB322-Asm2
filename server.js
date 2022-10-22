@@ -2,6 +2,7 @@ var HTTP_PORT = process.env.PORT || 8080;
 var express = require("express");
 var app = express();
 var path = require("path");
+var handlebars = require("express-handlebars");
 
 var HTTP_PORT = process.env.PORT ||8080;
 
@@ -9,6 +10,8 @@ function onHttpStart(){
   console.log("Express http server listening on; " + HTTP_PORT);
 }
 
+app.engine(".hbs", handlebars.engine({ extname: '.hbs'}));
+app.set('view engine', '.hbs');
 
 // setup a 'route' to listen on the default url path (http://localhost)
 
@@ -23,14 +26,39 @@ app.get("/article", function(req,res){
 
 });
 
-app.get("/registration", function(req,res){
-  // res.sendFile(path.join(__dirname,"/registration.html"));
-     res.render("registration", { layout: false });
+
+app.post("/registration", function(req,res){
+  //res.sendFile(path.join(__dirname,"/registration.html"));
+  const { email, firstName, lastName, bday, city, phone, password, confirmPassword } = req.body;
+
+  if (password === confirmPassword) {
+      //check if user with the same email is also registered
+      if(URLSearchParams.find(user => user.email === email)) {
+          res.render('register', {
+              message: 'User already registered.',
+              messageClass: 'alert-danger'
+          });
+          return;
+      }
+
+      const hashedPassword = getHashPassword(password);
+
+      res.render('login', {
+          message: 'Registration Complete. Please login to continue.',
+          messageClass: 'alert-success'
+      });
+  } else{
+      res.render('register', {
+          message: 'Password does not match.',
+          messageClass: 'alert-danger'
+      });
+  }
+    res.render("registration", { layout: false });
 });
 
 app.get("/login", function(req,res){
-  // res.sendFile(path.join(__dirname,"/login.html"));
-     res.render("login", { layout: false });
+  //res.sendFile(path.join(__dirname,"/login.html"));
+  res.render("login", { layout: false });
 });
 
 
