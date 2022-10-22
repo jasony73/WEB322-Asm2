@@ -29,30 +29,7 @@ app.get("/article", function(req,res){
 
 app.get("/registration", function(req,res){
   //res.sendFile(path.join(__dirname,"/registration.html"));
-  const { firstName, lastName, bday, city, phone, password, confirmPassword } = req.body;
-
-  if (password === confirmPassword) {
-      //check if user with the same email is also registered
-      if(URLSearchParams.find(user => user.email === email)) {
-          res.render('register', {
-              message: 'User already registered.',
-              messageClass: 'alert-danger'
-          });
-          return;
-      }
-
-      const hashedPassword = getHashPassword(password);
-
-      res.render('login', {
-          message: 'Registration Complete. Please login to continue.',
-          messageClass: 'alert-success'
-      });
-  } else{
-      res.render('register', {
-          message: 'Password does not match.',
-          messageClass: 'alert-danger'
-      });
-  }
+  
     res.render("registration", { layout: false });
 });
 
