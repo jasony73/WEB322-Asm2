@@ -29,7 +29,7 @@ app.get("/article", function(req,res){
 
 app.get("/registration", function(req,res){
   //res.sendFile(path.join(__dirname,"/registration.html"));
-  const { email, firstName, lastName, bday, city, phone, password, confirmPassword } = req.body;
+  const { firstName, lastName, bday, city, phone, password, confirmPassword } = req.body;
 
   if (password === confirmPassword) {
       //check if user with the same email is also registered
